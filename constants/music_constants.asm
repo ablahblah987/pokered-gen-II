@@ -9,7 +9,7 @@ const_value = 1
 	const MUSIC_POKECENTER
 	const MUSIC_GYM
 	const MUSIC_CITIES1
-	const MUSIC_CITIES2
+	const MUSIC_VICTORY_ROAD
 	const MUSIC_CELADON
 	const MUSIC_CINNABAR
 	const MUSIC_VERMILION
