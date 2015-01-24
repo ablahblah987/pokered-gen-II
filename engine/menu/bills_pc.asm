@@ -558,3 +558,7 @@ JustAMomentText:: ; 21865 (8:5865)
 PredefText23:: ; 21878 (8:5878)
 	db $FD ; FuncTX_BillsPC
 
+PCBoxOWPal:
+	call Delay3
+	ld b, $09
+	jp GoPAL_SET
