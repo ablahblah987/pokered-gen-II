@@ -72,10 +72,6 @@ asm_1e9b0: ; 1e9b0 (7:69b0)
 	ld a, RBSFX_02_5f
 	call PlaySound
 	call WaitForSoundToFinish
-.asm_1e9c2
-	ld a, [wc02a]
-	cp $b9
-	jr nz, .asm_1e9c2
 	ld a, $d3
 	ld [H_DOWNARROWBLINKCNT2], a ; $ff8c
 	call DisplayTextID
