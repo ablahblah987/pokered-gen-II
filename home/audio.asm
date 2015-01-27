@@ -304,9 +304,7 @@ PlayAnimSoundShim:
 	push bc
 	push af
 
-	ld d, a
-	callab _PlayAnimSoundShim
-	ld e, d
+	ld e, a
 	ld d, 00
 	jp PlaySFX_play
 

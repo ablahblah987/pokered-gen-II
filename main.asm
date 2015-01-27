@@ -6239,7 +6239,7 @@ AnimateEXPBar:
 	call LoadMonData
 	call IsCurrentMonBattleMon
 	ret nz
-	ld a, RBSFX_08_3d
+	ld a, RBSFX_02_3d
 	call PlaySoundWaitForCurrent
 	ld hl, CalcEXPBarPixelLength
 	ld b, BANK(CalcEXPBarPixelLength)
