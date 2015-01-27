@@ -45,6 +45,7 @@ tbp: MACRO
     tbp Music_CinnabarMansion ; X
     tbp Music_PokemonTower ; X
     tbp Music_SilphCo ;X
-    tbp Music_LookRocket
-    tbp Music_LookBeauty
-    tbp Music_LookYoungster
+    tbp Music_LookHiker
+    tbp Music_LookLass
+    tbp Music_LookOfficer
+	tbp Music_Route30

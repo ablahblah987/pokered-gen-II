@@ -310,38 +310,6 @@ LoadFrontSpriteByMonIndex:: ; 1389 (0:1389)
 	ld [$2000], a
 	ret
 
-; PlayCry
-
-GetCryData:: ; 13d9 (0:13d9)
-; Load cry data for monster a.
-	dec a
-	ld c, a
-	ld b, 0
-	ld hl, CryData
-	add hl, bc
-	add hl, bc
-	add hl, bc
-
-	ld a, Bank(CryData)
-	call BankswitchHome
-	ld a, [hli]
-	ld b, a ; cry id
-	ld a, [hli]
-	ld [wc0f1], a
-	ld a, [hl]
-	ld [wc0f2], a
-	call BankswitchBack
-
-	; Cry headers have 3 channels,
-	; and start from index $14,
-	; so add 3 times the cry id.
-	ld a, b
-	ld c, $14
-	rlca ; * 2
-	add b
-	add c
-	ret
-
 
 DisplayPartyMenu:: ; 13fc (0:13fc)
 	ld a,[hTilesetType]
@@ -3205,28 +3173,31 @@ WaitSFX:: ; 3c55
     ld a, [Danger]
     and a
     ret nz
-        push hl
+	ld a, [wSFXDontWait]
+	and a
+	ret nz
+	push hl
 
 .loop
-        ; ch5 on?
-        ld hl, Channel5 + Channel1Flags - Channel1
-        bit 0, [hl]
-        jr nz, .loop
-        ; ch6 on?
-        ld hl, Channel6 + Channel1Flags - Channel1
-        bit 0, [hl]
-        jr nz, .loop
-        ; ch7 on?
-        ld hl, Channel7 + Channel1Flags - Channel1
-        bit 0, [hl]
-        jr nz, .loop
-        ; ch8 on?
-        ld hl, Channel8 + Channel1Flags - Channel1
-        bit 0, [hl]
-        jr nz, .loop
+	; ch5 on?
+	ld hl, Channel5 + Channel1Flags - Channel1
+	bit 0, [hl]
+	jr nz, .loop
+	; ch6 on?
+	ld hl, Channel6 + Channel1Flags - Channel1
+	bit 0, [hl]
+	jr nz, .loop
+	; ch7 on?
+	ld hl, Channel7 + Channel1Flags - Channel1
+	bit 0, [hl]
+	jr nz, .loop
+	; ch8 on?
+	ld hl, Channel8 + Channel1Flags - Channel1
+	bit 0, [hl]
+	jr nz, .loop
 
-        pop hl
-        ret
+	pop hl
+	ret
 ; 3c74
 
 

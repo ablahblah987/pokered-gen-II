@@ -70,7 +70,8 @@ asm_1e9b0: ; 1e9b0 (7:69b0)
 	call PlaySound
 	ld c, 0;BANK(SFX_02_5f)
 	ld a, RBSFX_02_5f
-	call PlayMusic
+	call PlaySound
+	call WaitForSoundToFinish
 .asm_1e9c2
 	ld a, [wc02a]
 	cp $b9

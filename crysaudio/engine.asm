@@ -2479,7 +2479,7 @@ SetLRTracks: ; e8b1b
 
 _PlayMusic:: ; e8b30
     ld a, e
-    cp 45
+    cp NUM_SONGS
     ret nc ; sfx
 ; load music
 	call MusicOff
@@ -2487,11 +2487,6 @@ _PlayMusic:: ; e8b30
 	ld [hl], e ; song number
 	inc hl
 	ld [hl], d ; MusicIDHi (always $00)
-	ld a, [GBPrinter]
-	bit 1, a
-	jr nz, .MTMusic
-	bit 0, a
-	jr nz, .AltMusic
 	ld hl, Music
 .ContinueMusic
 	add hl, de ; three
@@ -2538,12 +2533,6 @@ _PlayMusic:: ; e8b30
 	ret
 ; e8b79
 
-.AltMusic
-	ld hl, Music2
-	jr .ContinueMusic
-.MTMusic
-	ld hl, MusicMT
-	jr .ContinueMusic
 PlayCry_:: ; e8b79
 ; Play cry de using parameters:
 ;	CryPitch

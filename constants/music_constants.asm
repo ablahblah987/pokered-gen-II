@@ -52,6 +52,10 @@ const_value = 1
 	const MUSIC_MEET_EVIL_TRAINER
 	const MUSIC_MEET_FEMALE_TRAINER
 	const MUSIC_MEET_MALE_TRAINER
+	
+	const MUSIC_OAK_INTRO
+	
+	const NUM_SONGS
 
 
 

@@ -139,8 +139,7 @@ HandlePokedexSideMenu: ; 4006d (10:406d)
 ; play pokemon cry
 .choseCry
 	ld a,[wd11e]
-	call GetCryData ; get cry data
-	call PlaySound ; play sound
+	call PlayCry
 	jr .handleMenuInput
 .choseArea
 	predef LoadTownMap_Nest ; display pokemon areas

@@ -37,34 +37,4 @@
 	dbw BANK(Cry_23), Cry_23
 	dbw BANK(Cry_24), Cry_24
 	dbw BANK(Cry_25), Cry_25
-	dbw BANK(Cry_26), Cry_26
-	dbw BANK(Cry_27), Cry_27
-	dbw BANK(Cry_28), Cry_28
-	dbw BANK(Cry_29), Cry_29
-	dbw BANK(Cry_2A), Cry_2A
-	dbw BANK(Cry_2B), Cry_2B
-	dbw BANK(Cry_2C), Cry_2C
-	dbw BANK(Cry_2D), Cry_2D
-	dbw BANK(Cry_2E), Cry_2E
-	dbw BANK(Cry_2F), Cry_2F
-	dbw BANK(Cry_30), Cry_30
-	dbw BANK(Cry_31), Cry_31
-	dbw BANK(Cry_32), Cry_32
-	dbw BANK(Cry_33), Cry_33
-	dbw BANK(Cry_34), Cry_34
-	dbw BANK(Cry_35), Cry_35
-	dbw BANK(Cry_36), Cry_36
-	dbw BANK(Cry_37), Cry_37
-	dbw BANK(Cry_38), Cry_38
-	dbw BANK(Cry_39), Cry_39
-	dbw BANK(Cry_3A), Cry_3A
-	dbw BANK(Cry_3B), Cry_3B
-	dbw BANK(Cry_3C), Cry_3C
-	dbw BANK(Cry_3D), Cry_3D
-	dbw BANK(Cry_3E), Cry_3E
-	dbw BANK(Cry_3F), Cry_3F
-	dbw BANK(Cry_40), Cry_40
-	dbw BANK(Cry_41), Cry_41
-	dbw BANK(Cry_42), Cry_42
-	dbw BANK(Cry_43), Cry_43
 ; e927c
