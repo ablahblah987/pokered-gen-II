@@ -7,7 +7,7 @@ Music_SafariZone_Ch1: ; bc2e (2:7c2e)
 	ftempo 132
 	volume 119
 	vibrato 6, 52
-	
+
 	dutycycle 2
 	notetype 12, 146
 	octave 3

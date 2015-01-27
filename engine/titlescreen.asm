@@ -175,9 +175,9 @@ ENDC
 	jr nz, .ScrollTitleScreenPokemonLogo
 	ret
 .asm_43f4
-    xor a
+	xor a
 	ld [hSCY], a
-    
+
 	call LoadScreenTilesFromBuffer1
 	ld c, $24
 	call DelayFrames

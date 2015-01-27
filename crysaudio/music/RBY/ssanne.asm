@@ -8,7 +8,7 @@ Music_SSAnne_Ch1: ; b3a7 (2:73a7)
 	volume 119
 	dutycycle 1
 	vibrato 8, 52
-	
+
 
 Music_SSAnne_branch_b3b2:
 	notetype 12, 164

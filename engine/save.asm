@@ -4,10 +4,10 @@ LoadSAV: ; 735e8 (1c:75e8)
 	call ClearScreen
 	call LoadFontTilePatterns
 	call LoadTextBoxTilePatterns
-	
+
 	ld a, 1
 	ld [wHaltAudio], a
-	
+
 	call LoadSAVCheckSum
 	jr c, .badsum
 	call LoadSAVCheckSum1
@@ -29,7 +29,7 @@ LoadSAV: ; 735e8 (1c:75e8)
 	ld a, $1 ; bad checksum
 .goodsum
 	ld [wd088], a ; checksum flag
-	
+
 	ld a, 0
 	ld [wHaltAudio], a
 	ret
@@ -278,17 +278,17 @@ SaveSAVtoSRAM2: ; 7380f (1c:780f)
 SaveSAVtoSRAM: ; 73848 (1c:7848)
 	ld a, $2
 	ld [wd088], a
-	
+
 	ld a, 1
 	ld [wHaltAudio], a
-	
+
 	call SaveSAVtoSRAM0
 	call SaveSAVtoSRAM1
 	call SaveSAVtoSRAM2
-	
+
 	ld a, 0
 	ld [wHaltAudio], a
-	
+
 	ret
 
 SAVCheckSum: ; 73856 (1c:7856)

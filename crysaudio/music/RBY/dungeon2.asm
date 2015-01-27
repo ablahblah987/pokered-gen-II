@@ -8,7 +8,7 @@ Music_Dungeon2_Ch1: ; 7e887 (1f:6887)
 	tempo 144
 	volume 119
 	dutycycle 3
-	
+
 	vibrato 10, 20
 
 Music_Dungeon2_branch_7e892:

@@ -7,7 +7,7 @@ Music_MeetEvilTrainer_Ch1: ; 7f69d (1f:769d)
 	tempo 124
 	volume 119
 	dutycycle 2
-	
+
 	notetype 12, 177
 	note __, 4
 	octave 3

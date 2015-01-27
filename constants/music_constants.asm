@@ -5,7 +5,7 @@
 ;ENDM
 const_value = 1
 
-    const MUSIC_PALLET_TOWN
+	const MUSIC_PALLET_TOWN
 	const MUSIC_POKECENTER
 	const MUSIC_GYM
 	const MUSIC_CITIES1
@@ -25,7 +25,7 @@ const_value = 1
 	const MUSIC_ROUTES3
 	const MUSIC_ROUTES4
 	const MUSIC_INDIGO_PLATEAU
-	
+
 	const MUSIC_GYM_LEADER_BATTLE
 	const MUSIC_TRAINER_BATTLE
 	const MUSIC_WILD_BATTLE
@@ -33,7 +33,7 @@ const_value = 1
 	const MUSIC_DEFEATED_TRAINER
 	const MUSIC_DEFEATED_WILD_MON
 	const MUSIC_DEFEATED_GYM_LEADER
-	
+
 	const MUSIC_TITLE_SCREEN
 	const MUSIC_CREDITS
 	const MUSIC_HALL_OF_FAME
@@ -52,9 +52,9 @@ const_value = 1
 	const MUSIC_MEET_EVIL_TRAINER
 	const MUSIC_MEET_FEMALE_TRAINER
 	const MUSIC_MEET_MALE_TRAINER
-	
+
 	const MUSIC_OAK_INTRO
-	
+
 	const NUM_SONGS
 
 

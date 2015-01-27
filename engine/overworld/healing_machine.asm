@@ -1,7 +1,7 @@
 AnimateHealingMachine: ; 70433 (1c:4433)
 	xor a
 	call PlayMusic
-	
+
 	ld de, PokeCenterFlashingMonitorAndHealBall ; $44b7
 	ld hl, vChars0 + $7c0
 	ld bc, (BANK(PokeCenterFlashingMonitorAndHealBall) << 8) + $03
@@ -18,8 +18,8 @@ AnimateHealingMachine: ; 70433 (1c:4433)
 	ld hl, wOAMBuffer + $84
 	ld de, PokeCenterOAMData ; $44d7
 	call Func_70503
-	
-	
+
+
 	ld a, [wPartyCount] ; wPartyCount
 	ld b, a
 .asm_7046e
@@ -45,7 +45,7 @@ AnimateHealingMachine: ; 70433 (1c:4433)
 	call PlayMusic
 	ld d, $28
 	call Func_704f3
-	
+
 .loop
 	ld a, [Channel1MusicID]
 	and a
@@ -58,8 +58,8 @@ AnimateHealingMachine: ; 70433 (1c:4433)
 	pop hl
 	pop af
 	ld [hl], a
-	
-	
+
+
 	jp UpdateSprites
 
 PokeCenterFlashingMonitorAndHealBall: ; 704b7 (1c:44b7)

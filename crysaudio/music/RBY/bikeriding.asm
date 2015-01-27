@@ -4,7 +4,7 @@ Music_BikeRiding:
 	dbw $02, Music_BikeRiding_Ch3
 	dbw $03, Music_BikeRiding_Ch4
 
-Music_BikeRiding_Ch1: 
+Music_BikeRiding_Ch1:
 	tempo 144
 	volume 119
 	dutycycle 3
@@ -154,7 +154,7 @@ Music_BikeRiding_branch_7dbc9:
 	intensity $b5
 	vibrato $8, $14
 	loopchannel 0, Music_BikeRiding_branch_7dbc9
-Music_BikeRiding_Ch2: 
+Music_BikeRiding_Ch2:
 	dutycycle 2
 	vibrato $6, $15
 	notetype $c, $c3
@@ -300,7 +300,7 @@ Music_BikeRiding_branch_7dc75:
 	note B_, 12
 	notetype $c, $c3
 	loopchannel 0, Music_BikeRiding_branch_7dc75
-Music_BikeRiding_Ch3: 
+Music_BikeRiding_Ch3:
 	notetype $c, $13
 	note __, 2
 Music_BikeRiding_branch_7dd17:
@@ -638,7 +638,7 @@ Music_BikeRiding_branch_7dd17:
 	note F_, 1
 	note __, 1
 	loopchannel 0, Music_BikeRiding_branch_7dd17
-Music_BikeRiding_Ch4: 
+Music_BikeRiding_Ch4:
 	togglenoise $1
 	notetype $c
 	note __, 2

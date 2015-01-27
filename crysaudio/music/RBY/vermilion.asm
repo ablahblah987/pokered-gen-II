@@ -9,7 +9,7 @@ Music_Vermilion_Ch1: ; b9eb (2:79eb)
 	volume 119
 	dutycycle 3
 	vibrato 12, 52
-	
+
 
 Music_Vermilion_branch_b9f6:
 	notetype 12, 181

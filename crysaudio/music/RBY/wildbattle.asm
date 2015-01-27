@@ -3,7 +3,7 @@ Music_WildBattle:
 	dbw $01, Music_WildBattle_Ch2
 	dbw $02, Music_WildBattle_Ch3
 
-Music_WildBattle_Ch1: 
+Music_WildBattle_Ch1:
 	ftempo 104
 	volume 119
 	dutycycle 3
@@ -301,7 +301,7 @@ Music_WildBattle_branch_230e0:
 	intensity $a7
 	note C#, 8
 	loopchannel 0, Music_WildBattle_branch_230e0
-Music_WildBattle_Ch2: 
+Music_WildBattle_Ch2:
 	dutycycle 3
 	vibrato $8, $25
 	notetype $c, $c3
@@ -460,7 +460,7 @@ Music_WildBattle_branch_23225:
 	intensity $c7
 	note F_, 8
 	loopchannel 0, Music_WildBattle_branch_23225
-Music_WildBattle_Ch3: 
+Music_WildBattle_Ch3:
 	vibrato $0, $20
 	notetype $c, $11
 	octave 4

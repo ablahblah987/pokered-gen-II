@@ -7,7 +7,7 @@ Music_MeetFemaleTrainer_Ch1: ; 7f6f9 (1f:76f9)
 	tempo 124
 	volume 119
 	dutycycle 1
-	
+
 	notetype 12, 178
 	octave 3
 	note G#, 6

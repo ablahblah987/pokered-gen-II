@@ -18,7 +18,7 @@ Music_MeetRival_branch_b123:
 	volume 119
 	dutycycle 3
 	vibrato 6, 52
-	
+
 	notetype 12, 179
 	octave 4
 	note D_, 1
@@ -139,7 +139,7 @@ Music_MeetRival_branch_b1a5:
 	volume 119
 	dutycycle 3
 	vibrato 6, 52
-	
+
 	notetype 12, 179
 	octave 3
 	note D_, 1

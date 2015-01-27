@@ -8,7 +8,7 @@ Music_Lavender_Ch1: ; bb58 (2:7b58)
 	tempo 152
 	volume 119
 	dutycycle 1
-	
+
 	vibrato 0, 136
 	notetype 12, 135
 	note __, 16

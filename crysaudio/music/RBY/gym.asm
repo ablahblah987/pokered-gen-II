@@ -8,7 +8,7 @@ Music_RBYGym_Ch1: ; bcbb (2:7cbb)
 	volume 119
 	dutycycle 3
 	vibrato 8, 34
-	
+
 	notetype 12, 181
 	octave 3
 	note G_, 6

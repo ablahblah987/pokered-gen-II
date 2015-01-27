@@ -4,7 +4,7 @@ Music_YellowUnusedSong:
 	dbw $02, Music_YellowUnusedSong_Ch3
 	dbw $03, Music_YellowUnusedSong_Ch4
 
-Music_YellowUnusedSong_Ch1: 
+Music_YellowUnusedSong_Ch1:
 	ftempo 140
 	volume 119
 	dutycycle 3
@@ -78,7 +78,7 @@ Music_YellowUnusedSong_branch_82fde:
 	note G_, 6
 	note A_, 12
 	loopchannel 0, Music_YellowUnusedSong_branch_82fde
-Music_YellowUnusedSong_Ch2: 
+Music_YellowUnusedSong_Ch2:
 	dutycycle 2
 	notetype $8, $c2
 	octave 4
@@ -161,7 +161,7 @@ Music_YellowUnusedSong_branch_8302a:
 	note A#, 6
 	note A_, 12
 	loopchannel 0, Music_YellowUnusedSong_branch_8302a
-Music_YellowUnusedSong_Ch3: 
+Music_YellowUnusedSong_Ch3:
 	notetype $c, $10
 	vibrato $2, $15
 	note __, 16
@@ -199,7 +199,7 @@ Music_YellowUnusedSong_branch_83075:
 	note G_, 8
 	note A#, 8
 	loopchannel 0, Music_YellowUnusedSong_branch_83075
-Music_YellowUnusedSong_Ch4: 
+Music_YellowUnusedSong_Ch4:
 	notetype 12
 	togglenoise 0
 	note D_, 4

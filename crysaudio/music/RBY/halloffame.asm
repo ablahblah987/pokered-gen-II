@@ -8,7 +8,7 @@ Music_RBYHallOfFame_Ch1: ; 7fbaf (1f:7baf)
 	volume 119
 	dutycycle 3
 	vibrato 12, 34
-	
+
 	notetype 12, 179
 	note __, 16
 	note __, 16

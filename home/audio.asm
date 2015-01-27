@@ -51,7 +51,7 @@ asm_2324:: ; 2324 (0:2324)
 	ld a, b
 	ld [wcfca], a
 	ld [wc0ee], a
-	
+
 	ld [MusicFadeID], a
 	ld a, 8
 	ld [MusicFade], a
@@ -59,26 +59,26 @@ asm_2324:: ; 2324 (0:2324)
 	ret
 
 Func_235f:: ; 235f (0:235f)
-    ;jp UpdateSound
+	;jp UpdateSound
 ;    ret ; XXX UpdateMusic
 Func_2385:
-    
-    ret
+
+	ret
 
 ; plays <s>music</s>SFX specified by a. If value is $ff, music is stopped
 PlaySound:: ; 23b1 (0:23b1)
 	push de
-    cp $ff
-    jr nz, .notff
-    xor a
-    call PlayMusic
+	cp $ff
+	jr nz, .notff
+	xor a
+	call PlayMusic
 	pop de
 	ret
 .notff
-    ld e, a
-    xor a
-    ld d, a
-    call PlaySFX
+	ld e, a
+	xor a
+	ld d, a
+	call PlaySFX
 	pop de
 	ret
 
@@ -96,9 +96,9 @@ OpenSRAMForSound::
 ;	push de
 ;	push bc
 ;	push af
-;	
+;
 ;    call OpenSRAMForSound
-;    
+;
 ;	ld a, [hROMBank]
 ;	push af
 ;	ld a, BANK(_SoundRestart)
@@ -124,13 +124,13 @@ UpdateSound:: ; 3b6a
 ;	push hl
 ;	push de
 ;	push bc
-;	push af   
-    ld a, [wHaltAudio]
-    and a
-    ret nz
-	
-    call OpenSRAMForSound
-    
+;	push af
+	ld a, [wHaltAudio]
+	and a
+	ret nz
+
+	call OpenSRAMForSound
+
 	ld a, [hROMBank]
 	push af
 	ld a, BANK(_UpdateSound)
@@ -151,18 +151,18 @@ UpdateSound:: ; 3b6a
 ; 3b86
 
 PlayMusic:: ; 3b97
-    ld e, a
-    xor a
-    ld d, a
+	ld e, a
+	xor a
+	ld d, a
 ; Play music de.
 
 	push hl
 	push de
 	push bc
 	push af
-	
-    call OpenSRAMForSound
-    
+
+	call OpenSRAMForSound
+
 	ld a, [hROMBank]
 	push af
 	ld a, BANK(_PlayMusic) ; and BANK(_SoundRestart)
@@ -247,9 +247,9 @@ PlayCry:: ; 13d0 (0:13d0)
 	pop af
 	ld [hROMBank], a
 	ld [$2000], a
-	
+
 	call WaitForSoundToFinish
-	
+
 	pop af
 	pop bc
 	pop de
@@ -303,7 +303,7 @@ PlayAnimSoundShim:
 	push de
 	push bc
 	push af
-	
+
 	ld d, a
 	callab _PlayAnimSoundShim
 	ld e, d
@@ -314,7 +314,7 @@ PlayAnimSoundShim:
 _LoadMusicByte:: ; 3b86
 ; CurMusicByte = [a:de]
 GLOBAL LoadMusicByte
-    
+
 	ld [hROMBank], a
 	ld [$2000], a
 

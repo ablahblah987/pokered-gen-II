@@ -3,7 +3,7 @@ Music_TrainerBattle:
 	dbw $01, Music_TrainerBattle_Ch2
 	dbw $02, Music_TrainerBattle_Ch3
 
-Music_TrainerBattle_Ch1: 
+Music_TrainerBattle_Ch1:
 	ftempo 112
 	volume 119
 	dutycycle 3
@@ -650,7 +650,7 @@ Music_TrainerBattle_branch_22962:
 	note A_, 1
 	note A#, 1
 	loopchannel 0, Music_TrainerBattle_branch_22962
-Music_TrainerBattle_Ch2: 
+Music_TrainerBattle_Ch2:
 	dutycycle 3
 	vibrato $a, $25
 	notetype $c, $c2
@@ -951,7 +951,7 @@ Music_TrainerBattle_branch_22bfc:
 	note E_, 8
 	note G_, 8
 	loopchannel 0, Music_TrainerBattle_branch_22bfc
-Music_TrainerBattle_Ch3: 
+Music_TrainerBattle_Ch3:
 	vibrato $0, $20
 	notetype $c, $14
 	octave 3

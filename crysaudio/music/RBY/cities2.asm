@@ -8,7 +8,7 @@ Music_Cities2_Ch1: ; b504 (2:7504)
 	volume 119
 	dutycycle 3
 	vibrato 8, 50
-	
+
 	notetype 12, 182
 	note __, 8
 	octave 3

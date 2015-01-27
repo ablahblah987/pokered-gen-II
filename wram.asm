@@ -2136,32 +2136,32 @@ Channel1MusicBank:: ; c103
 Channel1Flags:: ; c104
 ; 0: on/off
 ; 1: subroutine
-; 2: 
-; 3: 
+; 2:
+; 3:
 ; 4: noise sampling on/off
-; 5: 
-; 6: 
-; 7: 
+; 5:
+; 6:
+; 7:
 	ds 1
 Channel1Flags2:: ; c105
 ; 0: vibrato on/off
-; 1: 
+; 1:
 ; 2: duty cycle on/off
-; 3: 
-; 4: 
-; 5: 
-; 6: 
-; 7: 
+; 3:
+; 4:
+; 5:
+; 6:
+; 7:
 	ds 1
 Channel1Flags3:: ; c106
 ; 0: vibrato up/down
-; 1: 
-; 2: 
-; 3: 
-; 4: 
-; 5: 
-; 6: 
-; 7: 
+; 1:
+; 2:
+; 3:
+; 4:
+; 5:
+; 6:
+; 7:
 	ds 1
 Channel1MusicAddress:: ; c107
 	ds 2
@@ -2170,14 +2170,14 @@ Channel1LastMusicAddress:: ; c109
 ; could have been meant as a third-level address
 	ds 2
 Channel1NoteFlags:: ; c10d
-; 0: 
-; 1: 
-; 2: 
-; 3: 
-; 4: 
+; 0:
+; 1:
+; 2:
+; 3:
+; 4:
 ; 5: rest
-; 6: 
-; 7: 
+; 6:
+; 7:
 	ds 1
 Channel1Condition:: ; c10e
 ; used for conditional jumps
@@ -2249,7 +2249,7 @@ Channel1VibratoDelay:: ; c11f
 ; number of frames a note plays until vibrato starts
 	ds 1
 Channel1VibratoExtent:: ; c120
-; difference in 
+; difference in
 	ds 1
 Channel1VibratoRate:: ; c121
 ; counts down from a max of 15 frames

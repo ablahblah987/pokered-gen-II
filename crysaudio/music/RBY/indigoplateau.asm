@@ -9,7 +9,7 @@ Music_RBYIndigoPlateau_Ch1: ; a5f0 (2:65f0)
 	volume 119
 	dutycycle 3
 	vibrato 6, 52
-	
+
 	notetype 12, 178
 	octave 2
 	note A_, 8

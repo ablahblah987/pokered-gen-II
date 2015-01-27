@@ -242,8 +242,8 @@ unknownsfx0x10: MACRO
 ENDM
 
 unknownsfx0x20: MACRO
-    ; noise/sound
-    db \1
+	; noise/sound
+	db \1
 	;db $20 | \1
 	db \2
 	db \3

@@ -3170,9 +3170,9 @@ PlaySoundWaitForCurrent:: ; 3740 (0:3740)
 WaitForSoundToFinish:: ; 3748 (0:3748)
 WaitSFX:: ; 3c55
 ; infinite loop until sfx is done playing
-    ld a, [Danger]
-    and a
-    ret nz
+	ld a, [Danger]
+	and a
+	ret nz
 	ld a, [wSFXDontWait]
 	and a
 	ret nz

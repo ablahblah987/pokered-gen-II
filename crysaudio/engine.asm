@@ -2478,9 +2478,9 @@ SetLRTracks: ; e8b1b
 ; e8b30
 
 _PlayMusic:: ; e8b30
-    ld a, e
-    cp NUM_SONGS
-    ret nc ; sfx
+	ld a, e
+	cp NUM_SONGS
+	ret nc ; sfx
 ; load music
 	call MusicOff
 	ld hl, MusicID
@@ -2497,7 +2497,7 @@ _PlayMusic:: ; e8b30
 	ld e, [hl]
 	inc hl
 	ld d, [hl] ; music header address
-	
+
 	; pre-emptively disable all channels.  for some reason, this
 	; does not happen.
 	xor a
@@ -2505,7 +2505,7 @@ _PlayMusic:: ; e8b30
 	ld [Channel2+3], a
 	ld [Channel3+3], a
 	ld [Channel4+3], a
-	
+
 	call LoadMusicByte ; store first byte of music header in a
 	rlca
 	rlca
@@ -2539,60 +2539,60 @@ PlayCry_:: ; e8b79
 ;	CryEcho
 ;	CryLength
 	call MusicOff
-	
+
 ; Overload the music id with the cry id
 	ld hl, MusicID
 	ld [hl], e
 	inc hl
 	ld [hl], d
-	
+
 ; 3-byte pointers (bank, address)
 	ld hl, Cries
 	add hl, de
 	add hl, de
 	add hl, de
-	
+
 	ld a, [hli]
 	ld [MusicBank], a
-	
+
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
-	
+
 ; Read the cry's sound header
 	call LoadMusicByte
 	; Top 2 bits contain the number of channels
 	rlca
 	rlca
 	and a, 3
-	
+
 ; For each channel:
 	inc a
 .loop
 	push af
 	call LoadChannel
-	
+
 	ld hl, Channel1Flags - Channel1
 	add hl, bc
 	set 5, [hl]
-	
+
 	ld hl, Channel1Flags2 - Channel1
 	add hl, bc
 	set 4, [hl]
-	
+
 	ld hl, Channel1CryPitch - Channel1
 	add hl, bc
 	ld a, [CryPitch]
 	ld [hli], a
 	ld a, [CryEcho]
 	ld [hl], a
-	
+
 ; No tempo for channel 4
 	ld a, [CurChannel]
 	and a, 3
 	cp 3
 	jr nc, .start
-	
+
 ; Tempo is effectively length
 	ld hl, Channel1Tempo - Channel1
 	add hl, bc
@@ -2605,14 +2605,14 @@ PlayCry_:: ; e8b79
 	ld a, [Crysaudio+$1bc]
 	and a
 	jr z, .next
-	
+
 ; Stereo only: Play cry from the monster's side.
 ; This only applies in-battle.
-	
+
 	ld a, [Options]
 	bit 5, a ; stereo
 	jr z, .next
-	
+
 ; [Tracks] &= [CryTracks]
 	ld hl, Channel1Tracks - Channel1
 	add hl, bc
@@ -2622,23 +2622,23 @@ PlayCry_:: ; e8b79
 	ld hl, Channel1Tracks - Channel1
 	add hl, bc
 	ld [hl], a
-	
+
 .next
 	pop af
 	dec a
 	jr nz, .loop
-	
-	
+
+
 ; Cries play at max volume, so we save the current volume for later.
 	ld a, [LastVolume]
 	and a
 	jr nz, .end
-	
+
 	ld a, [Volume]
 	ld [LastVolume], a
 	ld a, $77
 	ld [Volume], a
-	
+
 .end
 	ld a, 1 ; stop playing music
 	ld [SFXPriority], a
@@ -2751,24 +2751,24 @@ PlayStereoSFX:: ; e8ca6
 ; play sfx de
 
 	call MusicOff
-	
+
 ; standard procedure if stereo's off
 	ld a, [Options]
 	bit 5, a
 	jp z, _PlaySFX
-	
+
 ; else, let's go ahead with this
 	ld hl, MusicID
 	ld [hl], e
 	inc hl
 	ld [hl], d
-	
+
 ; get sfx ptr
 	ld hl, SFX
 	add hl, de
 	add hl, de
 	add hl, de
-	
+
 ; bank
 	ld a, [hli]
 	ld [MusicBank], a
@@ -2776,22 +2776,22 @@ PlayStereoSFX:: ; e8ca6
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
-	
+
 ; bit 2-3
 	call LoadMusicByte
 	rlca
 	rlca
 	and 3 ; ch1-4
 	inc a
-	
+
 .loop
 	push af
 	call LoadChannel
-	
+
 	ld hl, Channel1Flags - Channel1
 	add hl, bc
 	set 3, [hl]
-	
+
 	push de
 	; get tracks for this channel
 	ld a, [CurChannel]
@@ -2803,47 +2803,47 @@ PlayStereoSFX:: ; e8ca6
 	ld a, [hl]
 	ld hl, Crysaudio+$1bc
 	and [hl]
-	
+
 	ld hl, Channel1Tracks - Channel1
 	add hl, bc
 	ld [hl], a
-	
+
 	ld hl, $0030 ; Crysaudio+$31 - Channel1
 	add hl, bc
 	ld [hl], a
-	
+
 	ld a, [CryTracks]
 	cp 2 ; ch 1-2
 	jr c, .asm_e8d0c
-	
+
 ; ch3-4
 	ld a, [Crysaudio+$1be]
-	
+
 	ld hl, $002e ; Crysaudio+$2f - Channel1
 	add hl, bc
 	ld [hl], a
-	
+
 	ld hl, $002f ; Crysaudio+$30 - Channel1
 	add hl, bc
 	ld [hl], a
-	
+
 	ld hl, Channel1Flags2 - Channel1
 	add hl, bc
 	set 7, [hl]
-	
+
 .asm_e8d0c
 	pop de
-	
+
 ; turn channel on
 	ld hl, Channel1Flags - Channel1
 	add hl, bc
 	set 0, [hl] ; on
-	
+
 ; done?
 	pop af
 	dec a
 	jr nz, .loop
-	
+
 ; we're done
 	call MusicOn
 	ret

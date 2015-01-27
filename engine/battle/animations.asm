@@ -2902,7 +2902,7 @@ Func_79e6a: ; 79e6a (1e:5e6a)
 	ld a, b
 	ld [wc0f2], a
 	ld a, c
-	jp PlaySound 
+	jp PlaySound
 
 
 

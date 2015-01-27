@@ -3,7 +3,7 @@ Music_Celadon:
 	dbw $01, Music_Celadon_Ch2
 	dbw $02, Music_Celadon_Ch3
 
-Music_Celadon_Ch1: 
+Music_Celadon_Ch1:
 	tempo 144
 	volume 119
 	dutycycle 3
@@ -108,7 +108,7 @@ Music_Celadon_branch_b6d4:
 	note F#, 4
 	note A_, 4
 	loopchannel 0, Music_Celadon_branch_b6d4
-Music_Celadon_Ch2: 
+Music_Celadon_Ch2:
 	dutycycle 3
 	notetype $c, $c2
 	octave 4
@@ -224,7 +224,7 @@ Music_Celadon_branch_b74a:
 	note E_, 2
 	note D_, 8
 	loopchannel 0, Music_Celadon_branch_b74a
-Music_Celadon_Ch3: 
+Music_Celadon_Ch3:
 	notetype $c, $13
 	note __, 8
 	octave 5

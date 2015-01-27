@@ -7,7 +7,7 @@ Music_Dungeon1:
 Music_Dungeon1_Ch1: ; 7ded1 (1f:5ed1)
 	tempo 144
 	volume 119
-	dutycycle 3	
+	dutycycle 3
 	vibrato 10, 20
 	notetype 12, 77
 	note __, 8

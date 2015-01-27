@@ -6,15 +6,15 @@ AUDIO_3 EQU $1f
 INCLUDE "constants.asm"
 INCLUDE "crysmacros.asm"
 
-; crystal.py macros: 
+; crystal.py macros:
 octave: MACRO
 	db $d8 - (\1)
 	ENDM
-	
+
 notetype: MACRO
 	db $d8, \1
 IF _NARG==2
-    db \2
+	db \2
 ENDC
 	ENDM
 forceoctave: MACRO
@@ -141,56 +141,56 @@ callchannel: MACRO
 endchannel: MACRO
 	db $ff
 	ENDM
-	
-	
+
+
 sound: MACRO
-    db \1, \2
-    dw \3
-    ENDM
+	db \1, \2
+	dw \3
+	ENDM
 
 noise: MACRO
-    db \1, \2, \3
-    ENDM
-    
+	db \1, \2, \3
+	ENDM
+
 toggleperfectpitch: MACRO ; XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 	ENDM
 ; red:
 
 SECTION "Battle SFX Shim", ROMX
 Bank08OldSFXHeaderPositions:
-    db $01, $02, $03, $04, $05, $06, $07, $08, $09, $0A, $0B, $0C, $0D, $0E, $0F, $10, $11, $12, $13, $14, $17, $1A, $1D, $20, $23, $26, $29, $2C, $2F, $32, $35, $38, $3B, $3E, $41, $44, $47, $4A, $4D, $50, $53, $56, $59, $5C, $5F, $62, $65, $68, $6B, $6E, $71, $74, $77, $7A, $7D, $80, $83, $86, $89, $8C, $8D, $8E, $8F, $90, $91, $93, $95, $97, $98, $9A, $9D, $9E, $9F, $A0, $A1, $A2, $A3, $A4, $A5, $A6, $A7, $A8, $A9, $AA, $AB, $AC, $AD, $AE, $AF, $B0, $B1, $B2, $B3, $B4, $B6, $B7, $B8, $B9, $BA, $BB, $BD, $BE, $BF, $C2, $C5, $C7, $CA, $CC, $CF, $D2, $D5, $D8, $DB, $DD, $DF, $E1, $E4, $E6, $E9
-    db $ff
+	db $01, $02, $03, $04, $05, $06, $07, $08, $09, $0A, $0B, $0C, $0D, $0E, $0F, $10, $11, $12, $13, $14, $17, $1A, $1D, $20, $23, $26, $29, $2C, $2F, $32, $35, $38, $3B, $3E, $41, $44, $47, $4A, $4D, $50, $53, $56, $59, $5C, $5F, $62, $65, $68, $6B, $6E, $71, $74, $77, $7A, $7D, $80, $83, $86, $89, $8C, $8D, $8E, $8F, $90, $91, $93, $95, $97, $98, $9A, $9D, $9E, $9F, $A0, $A1, $A2, $A3, $A4, $A5, $A6, $A7, $A8, $A9, $AA, $AB, $AC, $AD, $AE, $AF, $B0, $B1, $B2, $B3, $B4, $B6, $B7, $B8, $B9, $BA, $BB, $BD, $BE, $BF, $C2, $C5, $C7, $CA, $CC, $CF, $D2, $D5, $D8, $DB, $DD, $DF, $E1, $E4, $E6, $E9
+	db $ff
 
 _PlayAnimSoundShim::
-    ; Okay, so, basically, we need to convert old SFX IDs into
-    ; new ones.
-    ; This is done via a lookup table.
-    ld a, d
-    ld b, 1
-    ld c, a
-    ld hl, Bank08OldSFXHeaderPositions
+	; Okay, so, basically, we need to convert old SFX IDs into
+	; new ones.
+	; This is done via a lookup table.
+	ld a, d
+	ld b, 1
+	ld c, a
+	ld hl, Bank08OldSFXHeaderPositions
 .loop
-    ld a, [hli]
-    cp c
-    jr z, .found
-    cp $ff
-    jr z, .not_found
-    inc b
-    jr .loop
+	ld a, [hli]
+	cp c
+	jr z, .found
+	cp $ff
+	jr z, .not_found
+	inc b
+	jr .loop
 .found
-    ld a, b
-    ; Is this ID shared (02), or unique to the battle bank? (08)
-    ; $5d is the first 1F-only sfx
-    cp $40
-    jr c, .done
-    add $20 ; - $40 + $60
+	ld a, b
+	; Is this ID shared (02), or unique to the battle bank? (08)
+	; $5d is the first 1F-only sfx
+	cp $40
+	jr c, .done
+	add $20 ; - $40 + $60
 .done
-    ld d, a
-    ret
+	ld d, a
+	ret
 .not_found
-    ld b, b
+	ld b, b
 	ld d, 0
-    ret
+	ret
 
 SECTION "Sound Effect Headers 1", ROMX, BANK[AUDIO_1]
 INCLUDE "audio/headers/sfxheaders02.asm"
@@ -630,7 +630,7 @@ OwnedMonValues: ; 7d170 (1f:5170)
 	db 10, 40, 60, 90, 120, 150, $ff
 
 ; crystal:
-    
+
 SECTION "Audio Engine 1", ROMX, BANK[AUDIO_1]
 
 

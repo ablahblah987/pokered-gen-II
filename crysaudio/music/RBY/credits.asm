@@ -8,7 +8,7 @@ Music_RBYCredits_Ch1: ; 7fc1f (1f:7c1f)
 	volume 119
 	dutycycle 3
 	vibrato 8, 52
-	
+
 	notetype 12, 181
 	octave 4
 	note E_, 6

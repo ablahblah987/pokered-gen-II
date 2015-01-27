@@ -8,7 +8,7 @@ Music_OaksLab_Ch1: ; 7eeb9 (1f:6eb9)
 	volume 119
 	dutycycle 3
 	vibrato 16, 18
-	
+
 	notetype 12, 179
 	octave 2
 	note B_, 1

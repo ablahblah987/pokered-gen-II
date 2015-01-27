@@ -8,7 +8,7 @@ Music_MeetMaleTrainer_Ch1: ; 7f77b (1f:777b)
 	volume 119
 	dutycycle 3
 	vibrato 20, 51
-	
+
 	notetype 12, 180
 	octave 3
 	note C#, 1

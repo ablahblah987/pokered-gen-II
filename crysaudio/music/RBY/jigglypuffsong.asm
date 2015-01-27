@@ -8,7 +8,7 @@ Music_JigglypuffSong_Ch1: ; 7fb7d (1f:7b7d)
 	vibrato 8, 36
 	dutycycle 2
 	unknownmusic0xde 165
-	
+
 	notetype 13, 103
 	octave 4
 	note E_, 8

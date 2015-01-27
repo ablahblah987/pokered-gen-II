@@ -754,19 +754,19 @@ HandleBlackOut::
 	jp SpecialEnterMap
 
 StopMusic::
-    xor a
+	xor a
 	ld [MusicFadeID], a
 	ld a, 1
 	ld [MusicFade], a
 .wait0
-    ld a, [MusicFadeCount]
-    and a
-    jr z, .wait0
+	ld a, [MusicFadeCount]
+	and a
+	jr z, .wait0
 .wait1
-    ld a, [MusicFadeCount]
-    and a
-    jr nz, .wait1
-    ret
+	ld a, [MusicFadeCount]
+	and a
+	jr nz, .wait1
+	ret
 	;call PlayMusic ; PlaySound
 ;.wait
 ;	ld a, [wMusicHeaderPointer]
@@ -1239,11 +1239,11 @@ CollisionCheckOnLand:: ; 0bd1 (0:0bd1)
 	;ld a,[CurSFX]
 	;cp a,RBSFX_02_5b ; check if collision sound is already playing
 	; curSFX is not cleared for some reason.
-	
-    ; ch5 on?
-    ld hl, Channel5 + Channel1Flags - Channel1
-    bit 0, [hl]
-    
+
+	; ch5 on?
+	ld hl, Channel5 + Channel1Flags - Channel1
+	bit 0, [hl]
+
 	jr nz,.setCarry
 	ld a,RBSFX_02_5b
 	call PlaySound ; play collision sound (if it's not already playing)

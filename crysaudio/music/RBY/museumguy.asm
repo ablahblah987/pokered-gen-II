@@ -8,7 +8,7 @@ Music_MuseumGuy_Ch1: ; adae (2:6dae)
 	tempo 128
 	volume 119
 	dutycycle 2
-	
+
 	notetype 12, 177
 	octave 3
 	note B_, 2

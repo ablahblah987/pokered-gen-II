@@ -8,7 +8,7 @@ Music_Cinnabar_Ch1: ; b86d (2:786d)
 	volume 119
 	dutycycle 3
 	vibrato 12, 52
-	
+
 
 Music_Cinnabar_branch_b878:
 	notetype 12, 181

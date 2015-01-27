@@ -3,7 +3,7 @@ Music_YellowIntro:
 	dbw $01, Music_YellowIntro_Ch2
 	dbw $02, Music_YellowIntro_Ch3
 
-Music_YellowIntro_Ch1: 
+Music_YellowIntro_Ch1:
 	ftempo 116
 	volume 119
 	dutycycle 3
@@ -103,7 +103,7 @@ Music_YellowIntro_Ch1:
 	octave 3
 	note B_, 16
 	endchannel
-Music_YellowIntro_Ch2: 
+Music_YellowIntro_Ch2:
 	dutycycle 2
 	vibrato $6, $15
 	notetype $c, $c2
@@ -204,7 +204,7 @@ Music_YellowIntro_Ch2:
 	notetype $c, $c2
 	note E_, 16
 	endchannel
-Music_YellowIntro_Ch3: 
+Music_YellowIntro_Ch3:
 	notetype $c, $10
 	octave 4
 	note E_, 1

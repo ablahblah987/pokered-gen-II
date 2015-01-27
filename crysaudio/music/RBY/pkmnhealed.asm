@@ -7,7 +7,7 @@ Music_PkmnHealed_Ch1: ; 9ba3 (2:5ba3)
 	ftempo 144
 	volume 119
 	fdutycycle 2
-	
+
 	notetype 12, 129
 	note __, 2
 	unknownmusic0xe0 0, $4C

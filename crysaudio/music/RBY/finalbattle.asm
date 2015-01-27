@@ -3,7 +3,7 @@ Music_FinalBattle:
 	dbw $01, Music_FinalBattle_Ch2
 	dbw $02, Music_FinalBattle_Ch3
 
-Music_FinalBattle_Ch1: 
+Music_FinalBattle_Ch1:
 	ftempo 112
 	volume 119
 	dutycycle 3
@@ -382,7 +382,7 @@ Music_FinalBattle_branch_23429:
 	intensity $b7
 	note E_, 8
 	loopchannel 0, Music_FinalBattle_branch_23429
-Music_FinalBattle_Ch2: 
+Music_FinalBattle_Ch2:
 	dutycycle 3
 	vibrato $8, $25
 	notetype $c, $c2
@@ -734,7 +734,7 @@ Music_FinalBattle_branch_23710:
 	note F#, 2
 	note D_, 2
 	endchannel
-Music_FinalBattle_Ch3: 
+Music_FinalBattle_Ch3:
 	notetype $c, $11
 	octave 4
 	note E_, 4

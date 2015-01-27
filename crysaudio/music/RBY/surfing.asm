@@ -8,7 +8,7 @@ Music_Surfing_Ch1: ; 7fa19 (1f:7a19)
 	volume 119
 	dutycycle 3
 	vibrato 12, 52
-	
+
 	notetype 12, 181
 	note __, 6
 	octave 2

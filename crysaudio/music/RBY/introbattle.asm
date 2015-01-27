@@ -9,7 +9,7 @@ Music_IntroBattle_Ch1: ; 7f844 (1f:7844)
 	volume 119
 	dutycycle 3
 	vibrato 6, 52
-	
+
 	notetype 12, 177
 	note __, 8
 	octave 2

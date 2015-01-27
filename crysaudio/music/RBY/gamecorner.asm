@@ -8,7 +8,7 @@ Music_RBYGameCorner_Ch1: ; 7e20b (1f:620b)
 	volume 119
 	dutycycle 3
 	vibrato 12, 52
-	
+
 	notetype 12, 181
 	octave 3
 	note A_, 6

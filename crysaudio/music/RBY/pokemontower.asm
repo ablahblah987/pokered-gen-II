@@ -7,7 +7,7 @@ Music_PokemonTower_Ch1: ; 7f04a (1f:704a)
 	tempo 152
 	volume 119
 	dutycycle 3
-	
+
 	vibrato 12, 35
 	notetype 12, 128
 	note __, 4

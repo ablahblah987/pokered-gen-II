@@ -7,7 +7,7 @@ Music_MeetProfOak_Ch1: ; af59 (2:6f59)
 	tempo 112
 	volume 119
 	dutycycle 3
-	
+
 	notetype 12, 180
 	octave 3
 	note F#, 1

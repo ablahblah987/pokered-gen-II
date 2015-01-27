@@ -3,7 +3,7 @@ Music_MeetJessieJames:
 	dbw $01, Music_MeetJessieJames_Ch2
 	dbw $02, Music_MeetJessieJames_Ch3
 
-Music_MeetJessieJames_Ch1: 
+Music_MeetJessieJames_Ch1:
 	tempo 144
 	volume 119
 	dutycycle 3
@@ -79,7 +79,7 @@ Music_MeetJessieJames_branch_83187:
 	notetype $c, $b4
 	note A#, 4
 	loopchannel 0, Music_MeetJessieJames_branch_83187
-Music_MeetJessieJames_Ch2: 
+Music_MeetJessieJames_Ch2:
 	dutycycle 3
 	vibrato $6, $15
 	notetype $c, $c2
@@ -163,7 +163,7 @@ Music_MeetJessieJames_branch_831df:
 	notetype $c, $c5
 	note D#, 8
 	loopchannel 0, Music_MeetJessieJames_branch_831df
-Music_MeetJessieJames_Ch3: 
+Music_MeetJessieJames_Ch3:
 	notetype $c, $10
 	note __, 16
 	note __, 8

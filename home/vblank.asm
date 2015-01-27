@@ -53,7 +53,7 @@ VBlank::
 	;call Func_28cb
 
 
-    call UpdateSound
+	call UpdateSound
 ;	ld a, [wc0ef] ; music ROM bank
 ;	ld [H_LOADEDROMBANK], a
 ;	ld [MBC1RomBank], a

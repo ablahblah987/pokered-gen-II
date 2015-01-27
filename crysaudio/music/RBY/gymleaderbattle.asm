@@ -3,7 +3,7 @@ Music_GymLeaderBattle:
 	dbw $01, Music_GymLeaderBattle_Ch2
 	dbw $02, Music_GymLeaderBattle_Ch3
 
-Music_GymLeaderBattle_Ch1: 
+Music_GymLeaderBattle_Ch1:
 	ftempo 104
 	volume 119
 	dutycycle 3
@@ -548,7 +548,7 @@ Music_GymLeaderBattle_branch_223b0:
 	note G#, 4
 	note E_, 6
 	loopchannel 0, Music_GymLeaderBattle_branch_223b0
-Music_GymLeaderBattle_Ch2: 
+Music_GymLeaderBattle_Ch2:
 	dutycycle 3
 	vibrato $8, $25
 	notetype $c, $c3
@@ -846,7 +846,7 @@ Music_GymLeaderBattle_branch_225e0:
 	octave 4
 	note A_, 6
 	loopchannel 0, Music_GymLeaderBattle_branch_225e0
-Music_GymLeaderBattle_Ch3: 
+Music_GymLeaderBattle_Ch3:
 	vibrato $0, $20
 	notetype $c, $13
 	note __, 12
