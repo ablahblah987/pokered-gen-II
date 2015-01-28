@@ -418,7 +418,8 @@ OaksLabScript13: ; 1ce32 (7:4e32)
 	ld a, $10
 	ld [$ff8c], a
 	call DisplayTextID
-	callba Music_RivalAlternateStart
+	ld a, MUSIC_MEET_RIVAL
+	call PlayMusic
 	ld a, $1
 	ld [H_SPRITEINDEX], a
 	ld de, .RivalExitMovement
@@ -483,7 +484,8 @@ OaksLabScript15: ; 1ceb0 (7:4eb0)
 	ld a, $ff
 	ld [wc0ee], a
 	call PlaySound
-	callba Music_RivalAlternateStart
+	ld a, MUSIC_MEET_RIVAL
+	call PlayMusic
 	ld a, $15
 	ld [$ff8c], a
 	call DisplayTextID
@@ -586,7 +588,8 @@ OaksLabScript16: ; 1cf12 (7:4f12)
 	ld a, $ff
 	ld [wc0ee], a
 	call PlaySound
-	callba Music_RivalAlternateStart
+	ld a, MUSIC_MEET_RIVAL
+	call PlayMusic
 	ld a, $1
 	ld [H_SPRITEINDEX], a
 	ld de, wNPCMovementDirections2

@@ -143,7 +143,8 @@ SSAnne2Script2: ; 6146d (18:546d)
 	ld a, $ff
 	ld [wc0ee], a
 	call PlaySound
-	callba Music_RivalAlternateStart
+	ld a, MUSIC_MEET_RIVAL
+	call PlayMusic
 	ld a, $3
 	ld [W_SSANNE2CURSCRIPT], a
 	ret

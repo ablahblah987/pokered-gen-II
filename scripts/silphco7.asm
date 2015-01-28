@@ -218,7 +218,8 @@ SilphCo7Script4: ; 51cc8 (14:5cc8)
 	ld a, $ff
 	ld [wc0ee], a
 	call PlaySound
-	callba Music_RivalAlternateStart
+	ld a, MUSIC_MEET_RIVAL
+	call PlayMusic
 	ld de, MovementData_51d1d
 	ld a, [wcf0d]
 	cp $1

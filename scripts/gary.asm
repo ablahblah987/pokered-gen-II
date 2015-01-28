@@ -109,7 +109,8 @@ GaryScript3: ; 75fbb (1d:5fbb)
 	ret
 
 GaryScript4: ; 75fe4 (1d:5fe4)
-	callba Music_Cities1AlternateTempo
+	ld a, MUSIC_CITIES1
+	call PlayMusic
 	ld a, $2
 	ld [$ff8c], a
 	call GaryScript_760c8

@@ -319,17 +319,6 @@ PlayBattleMusic:: ; 0x90c6
 .playSong
 	jp PlayMusic
 
-SECTION "Alt Music Routines", ROMX
-Music_RivalAlternateStart:: ; 0x9b47
-Music_RivalAlternateTempo:: ; 0x9b65
-Music_RivalAlternateStartAndTempo:: ; 0x9b75
-	ld a, MUSIC_MEET_RIVAL
-	jp PlayMusic
-
-Music_Cities1AlternateTempo:: ; 0x9b81
-	ld a, MUSIC_CITIES1
-	jp PlayMusic
-
 SECTION "Pokedex Rating SFX Routines", ROMX
 Func_7d13b:: ; 7d13b (1f:513b)
 	ld a, [$ffdc]
@@ -391,7 +380,6 @@ INCLUDE "crysaudio/rbsfx.asm"
 
 SECTION "Songs 1", ROMX
 
-INCLUDE "crysaudio/music/rivalbattle.asm"
 INCLUDE "crysaudio/music/championbattle.asm"
 INCLUDE "crysaudio/music/ssaqua.asm"
 INCLUDE "crysaudio/music/vermilioncity.asm"
@@ -434,7 +422,6 @@ INCLUDE "crysaudio/music/pallettown.asm"
 INCLUDE "crysaudio/music/profoakspokemontalk.asm"
 INCLUDE "crysaudio/music/profoak.asm"
 INCLUDE "crysaudio/music/lookrival.asm"
-INCLUDE "crysaudio/music/aftertherivalfight.asm"
 INCLUDE "crysaudio/music/surf.asm"
 INCLUDE "crysaudio/music/lookofficer.asm"
 INCLUDE "crysaudio/music/victoryroad.asm"
@@ -451,8 +438,6 @@ INCLUDE "crysaudio/music/RBY/cinnabarmansion.asm"
 INCLUDE "crysaudio/music/RBY/pokemontower.asm"
 INCLUDE "crysaudio/music/RBY/silphco.asm"
 INCLUDE "crysaudio/music/RBY/jigglypuffsong.asm"
-INCLUDE "crysaudio/music/RBY/cities1.asm"
-INCLUDE "crysaudio/music/RBY/meetrival.asm"
 INCLUDE "crysaudio/music/RBY/cinnabar.asm"
 
 

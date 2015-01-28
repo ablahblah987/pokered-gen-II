@@ -169,7 +169,8 @@ Route22Script2: ; 50fb5 (14:4fb5)
 	ld a, $ff
 	ld [wc0ee], a
 	call PlaySound
-	callba Music_RivalAlternateStart
+	ld a, MUSIC_MEET_RIVAL
+	call PlayMusic
 	ld a, [wcf0d]
 	cp $1
 	jr nz, .asm_50fff ; 0x50ff8 $5
@@ -232,7 +233,8 @@ Route22Script_5104e: ; 5104e (14:504e)
 	ld a, $ff
 	ld [wc0ee], a
 	call PlaySound
-	callba Music_RivalAlternateTempo
+	ld a, MUSIC_MEET_RIVAL
+	call PlayMusic
 	ld a, $2
 	ld [H_DOWNARROWBLINKCNT2], a ; $ff8c
 	call Route22MoveRivalSprite
@@ -314,7 +316,8 @@ Route22Script5: ; 510df (14:50df)
 	ld a, $ff
 	ld [wc0ee], a
 	call PlaySound
-	callba Music_RivalAlternateStartAndTempo
+	ld a, MUSIC_MEET_RIVAL
+	call PlayMusic
 	ld a, [wcf0d]
 	cp $1
 	jr nz, .asm_51134

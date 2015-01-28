@@ -175,7 +175,8 @@ CeruleanCityScript2: ; 195b1 (6:55b1)
 	ld a, $ff
 	ld [wc0ee], a
 	call PlaySound
-	callba Music_RivalAlternateStart
+	ld a, MUSIC_MEET_RIVAL
+	call PlayMusic
 	ld a, $1
 	ld [$ff8c], a
 	call SetSpriteMovementBytesToFF
