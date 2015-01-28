@@ -150,6 +150,20 @@ RGB: MACRO
 	dw (\3 << 10 | \2 << 5 | \1)
 	ENDM
 
+dt: MACRO ; three-byte (big-endian)
+	db (\1 >> 16) & $ff
+	db (\1 >> 8) & $ff
+	db \1 & $ff
+	ENDM
+
+bigdw: MACRO ; big-endian word
+	dw ((\1)/$100) + (((\1)&$ff)*$100)
+	ENDM
+
+lb: MACRO ; r, hi, lo
+	ld \1, \2 << 8 + \3
+	ENDM
+
 ; text macros
 TX_NUM: MACRO
 ; print a big-endian decimal number.
@@ -236,6 +250,45 @@ CH5		EQU 5
 CH6		EQU 6
 CH7		EQU 7
 
+note: MACRO
+	db \1 << 4 + (\2 - 1)
+	ENDM
+
+; pitch
+__ EQU 0
+C_ EQU 1
+C# EQU 2
+D_ EQU 3
+D# EQU 4
+E_ EQU 5
+F_ EQU 6
+F# EQU 7
+G_ EQU 8
+G# EQU 9
+A_ EQU 10
+A# EQU 11
+B_ EQU 12
+
+inc_octave: MACRO
+	db $f4
+	ENDM
+
+dec_octave: MACRO
+	db $f5
+	ENDM
+
+notetype0: MACRO
+	db $f6, \1
+	ENDM
+
+notetype1: MACRO
+	db $f7, \1
+	ENDM
+
+notetype2: MACRO
+	db $f8, \1
+	ENDM
+
 unknownsfx0x10: MACRO
 	db $dd ; soundinput
 	db \1
@@ -251,122 +304,198 @@ unknownsfx0x20: MACRO
 ENDM
 
 unknownnoise0x20: MACRO
-	db  \1 ; | $20
+	db \1 ; | $20
 	db \2
 	db \3
 ENDM
 
+; crystal macros:
+octave: MACRO
+	db $d8 - (\1)
+	ENDM
 
-;format: instrument length (in 16ths)
-snare1: MACRO
-	db $B0 | (\1 - 1)
-	db $01
-ENDM
+notetype: MACRO
+	db $d8, \1
+IF _NARG==2
+	db \2
+ENDC
+	ENDM
 
-snare2: MACRO
-	db $B0 | (\1 - 1)
-	db $02
-ENDM
+forceoctave: MACRO
+	db $d9, \1
+	ENDM
 
-snare3: MACRO
-	db $B0 | (\1 - 1)
-	db $03
-ENDM
+tempo: MACRO
+	db $da
+	bigdw \1
+	ENDM
 
-snare4: MACRO
-	db $B0 | (\1 - 1)
-	db $04
-ENDM
+dutycycle: MACRO
+	db $db, \1
+	ENDM
 
-snare5: MACRO
-	db $B0 | (\1 - 1)
-	db $05
-ENDM
+intensity: MACRO
+	db $dc, \1
+	ENDM
 
-triangle1: MACRO
-	db $B0 | (\1 - 1)
-	db $06
-ENDM
+soundinput: MACRO
+	db $dd, \1
+	ENDM
 
-triangle2: MACRO
-	db $B0 | (\1 - 1)
-	db $07
-ENDM
+unknownmusic0xde: MACRO
+	db $de, \1
+	ENDM
 
-snare6: MACRO
-	db $B0 | (\1 - 1)
-	db $08
-ENDM
+togglesfx: MACRO
+	db $df
+	ENDM
 
-snare7: MACRO
-	db $B0 | (\1 - 1)
-	db $09
-ENDM
+unknownmusic0xe0: MACRO
+	db $e0, \1, \2
+	ENDM
 
-snare8: MACRO
-	db $B0 | (\1 - 1)
-	db $0A
-ENDM
+vibrato: MACRO
+	db $e1, \1, \2
+	ENDM
 
-snare9: MACRO
-	db $B0 | (\1 - 1)
-	db $0B
-ENDM
+unknownmusic0xe2: MACRO
+	db $e2, \1
+	ENDM
 
-cymbal1: MACRO
-	db $B0 | (\1 - 1)
-	db $0C
-ENDM
+togglenoise: MACRO
+	db $e3, \1
+	ENDM
 
-cymbal2: MACRO
-	db $B0 | (\1 - 1)
-	db $0D
-ENDM
+panning: MACRO
+	db $e4, \1
+	ENDM
 
-cymbal3: MACRO
-	db $B0 | (\1 - 1)
-	db $0E
-ENDM
+volume: MACRO
+	db $e5, \1
+	ENDM
 
-mutedsnare1: MACRO
-	db $B0 | (\1 - 1)
-	db $0F
-ENDM
+tone: MACRO
+	db $e6
+	bigdw \1
+	ENDM
 
-triangle3: MACRO
-	db $B0 | (\1 - 1)
-	db $10
-ENDM
+unknownmusic0xe7: MACRO
+	db $e7, \1
+	ENDM
 
-mutedsnare2: MACRO
-	db $B0 | (\1 - 1)
-	db $11
-ENDM
+unknownmusic0xe8: MACRO
+	db $e8, \1
+	ENDM
 
-mutedsnare3: MACRO
-	db $B0 | (\1 - 1)
-	db $12
-ENDM
+globaltempo: MACRO
+	db $e9
+	bigdw \1
+	ENDM
 
-mutedsnare4: MACRO
-	db $B0 | (\1 - 1)
-	db $13
-ENDM
+restartchannel: MACRO
+	dbw $ea, \1
+	ENDM
 
-duty: MACRO
-	;db $EC
-	db $db
-	db \1
-ENDM
+newsong: MACRO
+	db $eb
+	bigdw \1
+	ENDM
 
-;format: rest length (in 16ths)
-rest: MACRO
-	db $C0 | (\1 - 1)
-ENDM
+sfxpriorityon: MACRO
+	db $ec
+	ENDM
 
-executemusic: MACRO
-	togglesfx
-ENDM
+sfxpriorityoff: MACRO
+	db $ed
+	ENDM
+
+unknownmusic0xee: MACRO
+	dbw $ee, \1
+	ENDM
+
+stereopanning: MACRO
+	db $ef, \1
+	ENDM
+
+sfxtogglenoise: MACRO
+	db $f0, \1
+	ENDM
+
+ftempo: MACRO
+	db $f1
+	bigdw \1
+	ENDM
+
+fdutycycle: MACRO
+	db $f2, \1
+	ENDM
+
+music0xf3: MACRO
+	db $f3
+	ENDM
+
+incoctave: MACRO
+	db $f4
+	ENDM
+
+decoctave: MACRO
+	db $f5
+	ENDM
+
+music0xf6: MACRO
+	db $f6
+	ENDM
+
+music0xf7: MACRO
+	db $f7
+	ENDM
+
+music0xf8: MACRO
+	db $f8
+	ENDM
+
+unknownmusic0xf9: MACRO
+	db $f9, \1
+	ENDM
+
+setcondition: MACRO
+	db $fa, \1
+	ENDM
+
+jumpif: MACRO
+	db $fb, \1
+	dw \2
+	ENDM
+
+jumpchannel: MACRO
+	dbw $fc, \1
+	ENDM
+
+loopchannel: MACRO
+	db $fd, \1
+	dw \2
+	ENDM
+
+callchannel: MACRO
+	dbw $fe, \1
+	ENDM
+
+endchannel: MACRO
+	db $ff
+	ENDM
+
+sound: MACRO
+	db \1, \2
+	dw \3
+	ENDM
+
+noise: MACRO
+	db \1, \2, \3
+	ENDM
+
+toggleperfectpitch: MACRO ; XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+	ENDM
+
 
 ;\1 (byte) = connected map id
 ;\2 (byte) = connected map width

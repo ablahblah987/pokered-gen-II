@@ -1,5 +1,5 @@
 SFX_02_3b_Ch1: ; b316 (2:7316)
-	executemusic
+	togglesfx
 	tempo 256
 	volume 119
 	dutycycle 2
@@ -26,7 +26,7 @@ SFX_02_3b_Ch1: ; b316 (2:7316)
 
 
 SFX_02_3b_Ch2: ; b335 (2:7335)
-	executemusic
+	togglesfx
 	vibrato 8, (2<<4) + 7
 	dutycycle 2
 	notetype 5, (12<<4) + 5
@@ -47,7 +47,7 @@ SFX_02_3b_Ch2: ; b335 (2:7335)
 
 
 SFX_02_3b_Ch3: ; b34d (2:734d)
-	executemusic
+	togglesfx
 	notetype 5, (1<<4) + 0
 	octave 5
 	note F_, 4

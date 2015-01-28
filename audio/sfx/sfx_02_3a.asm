@@ -1,5 +1,5 @@
 SFX_02_3a_Ch1: ; ad77 (2:6d77)
-	executemusic
+	togglesfx
 	tempo 256
 	volume 119
 	vibrato 6, (2<<4) + 6
@@ -17,7 +17,7 @@ SFX_02_3a_Ch1: ; ad77 (2:6d77)
 
 
 SFX_02_3a_Ch2: ; ad8e (2:6d8e)
-	executemusic
+	togglesfx
 	vibrato 8, (2<<4) + 7
 	dutycycle 2
 	notetype 4, (12<<4) + 1
@@ -31,7 +31,7 @@ SFX_02_3a_Ch2: ; ad8e (2:6d8e)
 
 
 SFX_02_3a_Ch3: ; ad9e (2:6d9e)
-	executemusic
+	togglesfx
 	notetype 4, (1<<4) + 0
 	octave 4
 	note B_, 1

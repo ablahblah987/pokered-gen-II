@@ -1,5 +1,5 @@
 SFX_08_46_Ch1: ; 23a13 (8:7a13)
-	executemusic
+	togglesfx
 	tempo 256
 	volume 119
 	dutycycle 3
@@ -23,7 +23,7 @@ SFX_08_46_Ch1: ; 23a13 (8:7a13)
 
 
 SFX_08_46_Ch2: ; 23a2e (8:7a2e)
-	executemusic
+	togglesfx
 	dutycycle 2
 	notetype 6, (12<<4) + 2
 	octave 4
@@ -45,7 +45,7 @@ SFX_08_46_Ch2: ; 23a2e (8:7a2e)
 
 
 SFX_08_46_Ch3: ; 23a44 (8:7a44)
-	executemusic
+	togglesfx
 	notetype 6, (1<<4) + 0
 	octave 4
 	note B_, 2

@@ -1,5 +1,5 @@
 SFX_02_42_Ch1: ; b362 (2:7362)
-	executemusic
+	togglesfx
 	tempo 256
 	volume 119
 	dutycycle 2
@@ -24,7 +24,7 @@ SFX_02_42_Ch1: ; b362 (2:7362)
 
 
 SFX_02_42_Ch2: ; b381 (2:7381)
-	executemusic
+	togglesfx
 	vibrato 4, (2<<4) + 3
 	dutycycle 2
 	notetype 5, (13<<4) + 1
@@ -48,7 +48,7 @@ SFX_02_42_Ch2: ; b381 (2:7381)
 
 
 SFX_02_42_Ch3: ; b39d (2:739d)
-	executemusic
+	togglesfx
 	notetype 5, (1<<4) + 0
 	octave 4
 	note D#, 4

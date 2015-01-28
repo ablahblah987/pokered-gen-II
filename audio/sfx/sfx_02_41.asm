@@ -1,5 +1,5 @@
 SFX_02_41_Ch1: ; b2c8 (2:72c8)
-	executemusic
+	togglesfx
 	tempo 256
 	volume 119
 	dutycycle 2
@@ -22,7 +22,7 @@ SFX_02_41_Ch1: ; b2c8 (2:72c8)
 
 
 SFX_02_41_Ch2: ; b2e1 (2:72e1)
-	executemusic
+	togglesfx
 	dutycycle 2
 	notetype 5, (12<<4) + 2
 	octave 5
@@ -45,7 +45,7 @@ SFX_02_41_Ch2: ; b2e1 (2:72e1)
 
 
 SFX_02_41_Ch3: ; b2f7 (2:72f7)
-	executemusic
+	togglesfx
 	notetype 5, (1<<4) + 0
 	octave 5
 	note C_, 1
