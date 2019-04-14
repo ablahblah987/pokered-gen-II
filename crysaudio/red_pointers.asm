@@ -3,48 +3,48 @@ tbp: MACRO
 	ENDM
 
 	tbp Music_Nothing
-	tbp Music_RBYPalletTown
-	tbp Music_Pokecenter
-	tbp Music_RBYGym
-	tbp Music_Cities1
-	tbp Music_Cities2
-	tbp Music_Celadon
-	tbp Music_Cinnabar
-	tbp Music_Vermilion
-	tbp Music_Lavender
-	tbp Music_SSAnne
-	tbp Music_MeetProfOak
-	tbp Music_MeetRival
-	tbp Music_MuseumGuy
-	tbp Music_SafariZone
-	tbp Music_PkmnHealed
-	tbp Music_Routes1
-	tbp Music_Routes2
-	tbp Music_Routes3
-	tbp Music_Routes4
-	tbp Music_RBYIndigoPlateau
-	tbp Music_GymLeaderBattle
-	tbp Music_TrainerBattle
-	tbp Music_WildBattle
-	tbp Music_FinalBattle
-	tbp Music_DefeatedTrainer
-	tbp Music_DefeatedWildMon
-	tbp Music_DefeatedGymLeader
-	tbp Music_RBYTitleScreen
-	tbp Music_RBYCredits
-	tbp Music_RBYHallOfFame
-	tbp Music_OaksLab
-	tbp Music_JigglypuffSong
-	tbp Music_BikeRiding
-	tbp Music_Surfing
-	tbp Music_RBYGameCorner
-	tbp Music_IntroBattle
-	tbp Music_Dungeon1
-	tbp Music_Dungeon2
-	tbp Music_Dungeon3
-	tbp Music_CinnabarMansion
-	tbp Music_PokemonTower
-	tbp Music_SilphCo
-	tbp Music_MeetEvilTrainer
-	tbp Music_MeetFemaleTrainer
-	tbp Music_MeetMaleTrainer
+	tbp Music_PalletTown
+	tbp Music_PokemonCenter
+	tbp Music_Gym
+	tbp Music_ViridianCity
+	tbp Music_VictoryRoad
+	tbp Music_CeladonCity
+	tbp Music_Cinnabar ; X
+	tbp Music_VermilionCity
+	tbp Music_LavenderTown
+	tbp Music_SSAqua
+	tbp Music_ProfOak
+	tbp Music_LookRival
+	tbp Music_ShowMeAround
+	tbp Music_Evolution
+	tbp Music_HealPokemon
+	tbp Music_Route1
+	tbp Music_Route2
+	tbp Music_Route3
+	tbp Music_Route12
+	tbp Music_IndigoPlateau
+	tbp Music_KantoGymBattle
+	tbp Music_KantoTrainerBattle
+	tbp Music_KantoWildBattle
+	tbp Music_ChampionBattle
+	tbp Music_TrainerVictory
+	tbp Music_WildPokemonVictory
+	tbp Music_GymLeaderVictory
+	tbp Music_TitleScreen
+	tbp Music_Credits
+	tbp Music_HallOfFame
+	tbp Music_ProfOaksPokemonTalk
+	tbp Music_JigglypuffSong ; X
+	tbp Music_Bicycle
+	tbp Music_Surf
+	tbp Music_GameCorner
+	tbp Music_GoldSilverOpening2
+	tbp Music_Dungeon1 ; X
+	tbp Music_Dungeon2 ; X
+	tbp Music_MtMoon
+	tbp Music_CinnabarMansion ; X
+	tbp Music_PokemonTower ; X
+	tbp Music_SilphCo ; X
+	tbp Music_LookRocket
+	tbp Music_LookBeauty
+	tbp Music_LookYoungster
