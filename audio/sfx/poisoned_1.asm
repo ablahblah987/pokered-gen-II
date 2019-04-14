@@ -1,5 +1,5 @@
 SFX_Poisoned_1_Ch4:
-	duty 0
+	dutycycle 0
 	pitchenvelope 1, 4
 	squarenote 4, 15, 2, 1536
 	loopchannel 4, SFX_Poisoned_1_Ch4

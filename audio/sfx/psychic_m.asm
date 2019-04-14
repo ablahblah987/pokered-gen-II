@@ -1,5 +1,5 @@
 SFX_Psychic_M_Ch4:
-	duty 2
+	dutycycle 2
 	pitchenvelope 15, 7
 	squarenote 8, 12, 4, 1981
 	squarenote 8, 12, 4, 1982
@@ -12,7 +12,7 @@ SFX_Psychic_M_Ch4:
 
 
 SFX_Psychic_M_Ch5:
-	duty 2
+	dutycycle 2
 	squarenote 8, 12, 4, 1904
 	squarenote 8, 12, 4, 1889
 	squarenote 8, 12, 4, 1890

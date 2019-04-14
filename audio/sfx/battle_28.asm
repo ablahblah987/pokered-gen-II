@@ -1,5 +1,5 @@
 SFX_Battle_28_Ch4:
-	duty 0
+	dutycycle 0
 	squarenote 0, 15, 1, 1984
 	squarenote 0, 15, 1, 1792
 	loopchannel 12, SFX_Battle_28_Ch4

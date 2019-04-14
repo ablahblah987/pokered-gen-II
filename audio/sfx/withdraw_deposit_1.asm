@@ -1,5 +1,5 @@
 SFX_Withdraw_Deposit_1_Ch4:
-	duty 1
+	dutycycle 1
 	pitchenvelope 3, -2
 	squarenote 4, 15, 2, 1280
 	pitchenvelope 2, 2

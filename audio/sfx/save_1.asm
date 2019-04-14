@@ -1,5 +1,5 @@
 SFX_Save_1_Ch4:
-	duty 2
+	dutycycle 2
 	squarenote 4, 15, 4, 1792
 	squarenote 2, 14, 4, 1536
 	squarenote 2, 14, 4, 1664
@@ -11,7 +11,7 @@ SFX_Save_1_Ch4:
 
 
 SFX_Save_1_Ch5:
-	duty 2
+	dutycycle 2
 	squarenote 4, 0, 8, 0
 	squarenote 2, 13, 4, 1793
 	squarenote 2, 12, 4, 1537

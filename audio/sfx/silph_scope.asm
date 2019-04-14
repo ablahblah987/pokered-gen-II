@@ -1,5 +1,5 @@
 SFX_Silph_Scope_Ch4:
-	duty 0
+	dutycycle 0
 	squarenote 0, 13, 2, 1792
 	squarenote 0, 13, 2, 1856
 	squarenote 0, 13, 2, 1920

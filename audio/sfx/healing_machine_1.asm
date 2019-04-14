@@ -1,5 +1,5 @@
 SFX_Healing_Machine_1_Ch4:
-	duty 2
+	dutycycle 2
 	pitchenvelope 2, -4
 	squarenote 4, 15, 2, 1280
 	pitchenvelope 2, 2

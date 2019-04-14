@@ -1,5 +1,5 @@
 SFX_Battle_36_Ch4:
-	duty 0
+	dutycycle 0
 	squarenote 2, 15, 1, 1920
 	squarenote 2, 15, 1, 1792
 	squarenote 2, 15, 1, 1936

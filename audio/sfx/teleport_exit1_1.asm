@@ -1,5 +1,5 @@
 SFX_Teleport_Exit1_1_Ch4:
-	duty 1
+	dutycycle 1
 	pitchenvelope 1, 7
 	squarenote 15, 13, 7, 1280
 	squarenote 15, 11, 7, 1408

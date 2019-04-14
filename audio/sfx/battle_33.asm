@@ -1,5 +1,5 @@
 SFX_Battle_33_Ch4:
-	duty 2
+	dutycycle 2
 	squarenote 6, 15, 1, 1280
 	squarenote 6, 15, 1, 1408
 	squarenote 6, 15, 1, 1536
@@ -9,7 +9,7 @@ SFX_Battle_33_Ch4:
 
 
 SFX_Battle_33_Ch5:
-	duty 3
+	dutycycle 3
 	squarenote 6, 14, 1, 1296
 	squarenote 6, 14, 1, 1424
 	squarenote 6, 14, 1, 1552

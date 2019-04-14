@@ -1,5 +1,5 @@
 SFX_Press_AB_1_Ch4:
-	duty 2
+	dutycycle 2
 	squarenote 0, 9, 1, 1984
 	squarenote 0, 8, 1, 2000
 	squarenote 0, 9, 1, 1984

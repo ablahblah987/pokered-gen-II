@@ -1,5 +1,5 @@
 SFX_Battle_1E_Ch4:
-	duty 0
+	dutycycle 0
 	pitchenvelope 3, -2
 	squarenote 4, 15, 2, 512
 	pitchenvelope 2, 2

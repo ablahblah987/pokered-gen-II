@@ -1,5 +1,5 @@
 SFX_Battle_27_Ch4:
-	duty 2
+	dutycycle 2
 	squarenote 15, 3, -7, 1984
 
 SFX_Battle_27_branch_2062a:
