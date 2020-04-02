@@ -1,5 +1,5 @@
 MonsterNames:
-	        db "Rhydon@@@@"
+	db "Rhydon@@@@"
 	db "Kangaskhan"
 	db "Nidoran♂@@"
 	db "Clefairy@@"
@@ -189,4 +189,3 @@ MonsterNames:
 	db "Bellsprout"
 	db "Weepinbell"
 	db "Victreebel"
-	
