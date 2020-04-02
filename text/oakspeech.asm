@@ -18,7 +18,7 @@ _OakSpeechText2B::
 	text $51,"For some people,"
 	line "#MON are"
 	cont "pets. Others use"
-	cont "them for fights."
+	cont "them as sex slaves."
 
 	para "Myself..."
 
@@ -33,12 +33,12 @@ _IntroducePlayerText::
 
 _IntroduceRivalText::
 	text "This is my grand-"
-	line "son. He's been"
-	cont "your rival since"
-	cont "you were a baby."
+	line "son. He is an"
+	cont "asshole."
 
-	para "...Erm, what is"
-	line "his name again?"
+	para "...Erm, what the"
+	line "fuck is his name" 
+	cont "again?"
 	prompt
 
 _OakSpeechText3::
