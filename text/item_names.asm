@@ -68,7 +68,7 @@ ItemNames:
 	db "X SPEED@"
 	db "X SPECIAL@"
 	db "COIN CASE@"
-	db "OAK's PARCEL@"
+	db "OAK's DILDO@"
 	db "ITEMFINDER@"
 	db "SILPH SCOPE@"
 	db "POKé FLUTE@"
