@@ -1,7 +1,8 @@
 _SilphCo9Text_5d8e5::
 	text "You look tired!"
-	line "You should take a"
-	cont "quick nap!"
+	line "Drop your pants"
+	cont "and close your"
+	cont "eyes."
 	prompt
 
 _SilphCo9Text_5d8ea::
