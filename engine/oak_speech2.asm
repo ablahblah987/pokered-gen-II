@@ -189,33 +189,33 @@ DisplayIntroNameTextBox:
 
 IF DEF(_RED)
 DefaultNamesPlayer:
-	db   "NEW NAME"
-	next "RED"
-	next "ASH"
-	next "JACK"
+	db   "New Name"
+	next "Dr. Phil"
+	next "Shaq"
+	next "Nic Cage"
 	db   "@"
 
 DefaultNamesRival:
-	db   "NEW NAME"
-	next "BLUE"
-	next "GARY"
-	next "JOHN"
+	db   "New Name"
+	next "Carl"
+	next "Chad"
+	next "Cormac"
 	db   "@"
 ENDC
 
 IF DEF(_BLUE)
 DefaultNamesPlayer:
-	db   "NEW NAME"
-	next "BLUE"
-	next "GARY"
-	next "JOHN"
+	db   "New Name"
+	next "Dr. Phil"
+	next "Shaq"
+	next "Nic Cage"
 	db   "@"
 
 DefaultNamesRival:
-	db   "NEW NAME"
-	next "RED"
-	next "ASH"
-	next "JACK"
+	db   "New Name"
+	next "Carl"
+	next "Chad"
+	next "Cormac"
 	db   "@"
 ENDC
 
@@ -245,27 +245,27 @@ GetDefaultName:
 
 IF DEF(_RED)
 DefaultNamesPlayerList:
-	db "NEW NAME@"
-	db "RED@"
-	db "ASH@"
-	db "JACK@"
+	db "New Name@"
+	db "Dr. Phil@"
+	db "Shaq@"
+	db "Nic Cage@"
 DefaultNamesRivalList:
-	db "NEW NAME@"
-	db "BLUE@"
-	db "GARY@"
-	db "JOHN@"
+	db "New Name@"
+	db "Carl@"
+	db "Chad@"
+	db "Cormac@"
 ENDC
 IF DEF(_BLUE)
 DefaultNamesPlayerList:
-	db "NEW NAME@"
-	db "BLUE@"
-	db "GARY@"
-	db "JOHN@"
+	db "New Name@"
+	db "Dr. Phil@"
+	db "Shaq@"
+	db "Nic Cage@"
 DefaultNamesRivalList:
-	db "NEW NAME@"
-	db "RED@"
-	db "ASH@"
-	db "JACK@"
+	db "New Name@"
+	db "Carl@"
+	db "Chad@"
+	db "Cormac@"
 ENDC
 
 TextTerminator_6b20:
